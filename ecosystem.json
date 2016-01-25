@@ -1,0 +1,25 @@
+{
+  "apps": [{
+    "name": "react-start-kit",
+    "script": "index.js",
+    "log_date_format": "YYYY-MM-DD HH:mm:ss"
+  }],
+  "deploy" : {
+    "stage" : {
+      "user" : "deploy",
+      "host" : "https://github.com",
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:jovey-zheng/react-start-kit.git",
+      "path" : "~/react-start-kit",
+      "post-deploy" : "npm i && npm run build"
+    },
+    "productoin" : {
+      "user" : "deploy",
+      "host" : "https://github.com",
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:jovey-zheng/react-start-kit.git",
+      "path" : "~/react-start-kit",
+      "post-deploy" : "npm i && npm run build"
+    }
+  }
+}

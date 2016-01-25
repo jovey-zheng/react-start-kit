@@ -1,0 +1,13 @@
+.sidebar-title {
+  margin-right: -10px;
+  border-right: 1px solid #E9E9E9;
+}
+
+.ant-menu-item a {
+  color: #666666;
+  display: inherit;
+}
+
+.ant-menu-item-selected a {
+  color: #2db7f5;
+}

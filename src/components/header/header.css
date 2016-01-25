@@ -1,0 +1,10 @@
+.container {
+  height: 57px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.header-search {
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
