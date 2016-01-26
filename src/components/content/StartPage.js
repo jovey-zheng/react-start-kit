@@ -5,7 +5,7 @@ export default class StartPage extends Component {
   render() {
     return (
       <div>
-        <h1>aaa</h1>
+        <span>分组件内容可以写在这里</span>
       </div>
     )
   }

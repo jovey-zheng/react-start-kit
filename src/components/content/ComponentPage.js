@@ -5,7 +5,7 @@ export default class ComponentPage extends Component {
   render() {
     return (
       <div>
-        <h1>ccc</h1>
+        <span>React 组件分为容器型和展示型组件</span>
       </div>
     )
   }

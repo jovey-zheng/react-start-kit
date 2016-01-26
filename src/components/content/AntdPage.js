@@ -5,7 +5,7 @@ export default class AntdPage extends Component {
   render() {
     return (
       <div>
-        <h1>bbb</h1>
+        <span>这里是 Ant Design 的 React 实现，开发和服务于企业级后台产品。</span>
       </div>
     )
   }
