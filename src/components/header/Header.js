@@ -24,7 +24,7 @@ export default class Header extends Component {
           />
         </Col>
 
-        <Col span="4" offset="18" className="pull-right">
+        <Col span="8" offset="14" className="pull-right">
           <Tooltip placement="bottom" title="日历">
             <Icon type="calendar" className="padding-lr-md font-md pointer-hover" />
           </Tooltip>

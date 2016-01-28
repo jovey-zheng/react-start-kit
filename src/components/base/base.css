@@ -34,6 +34,9 @@
 .margin-bottom-md {
   margin-bottom: 10px !important;
 }
+.margin-left-md {
+  margin-left: 10px !important;
+}
 .text-center {
   text-align: center;
 }
@@ -75,4 +78,26 @@
 }
 .border-normal {
   border-bottom: 1px solid #e9e9e9;
+}
+.text-red {
+  color: #ff0000;
+}
+.code-text {
+  border: 1px solid #e6d6d6;
+  background: #e3e3e3;
+  display: inline-block;
+  padding: 3px;
+  border-radius: 5px;
+}
+.content-container {
+  margin-top: 57px;
+  width: 100%;
+}
+pre {
+  background: #e3e3e3;
+  border-radius: 5px;
+}
+
+.ant-btn {
+  border-radius: 0;
 }

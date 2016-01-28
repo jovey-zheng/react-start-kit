@@ -1,6 +1,12 @@
 .container {
   height: 57px;
   border-bottom: 1px solid #e9e9e9;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 237px;
+  z-index: 10;
+  background: #ffffff;
 }
 
 .header-search {
