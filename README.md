@@ -10,7 +10,7 @@ This project unfinished...
   $ npm start
   ```
 
-with `minhost`:
+with [`minihost`](https://www.npmjs.com/package/minihost):
 
   ```
   h -n start npm start
