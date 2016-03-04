@@ -29,7 +29,7 @@ export default class Header extends Component {
             <Icon type="calendar" className="padding-lr-md font-md pointer-hover" />
           </Tooltip>
 
-          <Tooltip placement="bottom" title="日历">
+          <Tooltip placement="bottom" title="通知">
             <Badge dot className="padding-lr-md">
               <Icon type="notification" className="font-md pointer-hover" />
             </Badge>
