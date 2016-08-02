@@ -1,6 +1,8 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {Button} from 'antd';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import {
+  Button
+} from 'antd';
 import classNames from 'classnames';
 import * as counterActions from 'actions/counterActions';
 
@@ -23,8 +25,14 @@ export default class StartPage extends Component {
   }
 
   render() {
-    const {colorStatus} = this.state;
-    const {counter, inc, dec} = this.props;
+    const {
+      colorStatus
+    } = this.state;
+    const {
+      counter,
+      inc,
+      dec
+    } = this.props;
 
     return (
       <div>

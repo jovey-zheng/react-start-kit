@@ -1,6 +1,5 @@
-require.ensure([], (require) => {
-  const {render} = require('react-dom');
-  const app = require('./app');
+import React from 'react';
+import { render } from 'react-dom';
+import app from './app';
 
-  render(app, document.getElementById('app'));
-});
+render(app, document.getElementById('app'));

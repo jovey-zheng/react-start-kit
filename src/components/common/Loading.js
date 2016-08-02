@@ -1,5 +1,7 @@
-import React, {Component} from 'react';
-import {Icon} from 'antd';
+import React, { Component } from 'react';
+import {
+  Icon
+} from 'antd';
 
 const main = {
   textAlign: 'center',

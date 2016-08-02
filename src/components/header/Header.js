@@ -1,6 +1,12 @@
-import React, {Component, PropTypes} from 'react';
-import {connect} from 'react-redux';
-import {Row, Col, Icon, Badge, Tooltip} from 'antd';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import {
+  Row,
+  Col,
+  Icon,
+  Badge,
+  Tooltip
+} from 'antd';
 
 import './header.css';
 
@@ -15,7 +21,7 @@ export default class Header extends Component {
   render() {
     return (
       <Row type="flex" align="middle" className="container padding-lr-lg">
-        <Col span="2">
+        <Col span={2}>
           <input
             type="text"
             placeholder="搜索..."
@@ -24,7 +30,7 @@ export default class Header extends Component {
           />
         </Col>
 
-        <Col span="8" offset="14" className="pull-right">
+        <Col span={8} offset={14} className="pull-right">
           <Tooltip placement="bottom" title="日历">
             <Icon type="calendar" className="padding-lr-md font-md pointer-hover" />
           </Tooltip>

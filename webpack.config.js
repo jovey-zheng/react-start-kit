@@ -6,7 +6,7 @@ module.exports = {
   },
   output: {
     path: __dirname + '/_dist',
-    filename: '[name]_[hash].js',
+    filename: '[name]_[hash:8].js',
   },
   resolve: {
     root: [
@@ -27,7 +27,7 @@ module.exports = {
       include: /components/,
     }, {
       test: /\.(jpe?g|png|gif|svg|ico)/i,
-      loader: 'file',
+      loader: 'file?name=img_[hash:8].[ext]',
     }, {
       test: /\.(ttf|eot|svg|woff|woff2)/,
       loader: 'file',
@@ -44,6 +44,15 @@ module.exports = {
       template: __dirname + '/src/index.html',
       favicon: __dirname + '/src/favicon.ico',
       inject: false,
+      minify: {
+        html5: true,
+        collapseWhitespace: true,
+        // conservativeCollapse: true,
+        removeComments: true,
+        removeTagWhitespace: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+      }
     }),
   ],
 };

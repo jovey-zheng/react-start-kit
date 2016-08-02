@@ -1,9 +1,7 @@
-import {createStore, applyMiddleware, combineReducers, compose} from 'redux';
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import thunk from 'redux-thunk';
-import {reduxReactRouter} from 'redux-router';
-import createHistory from 'history/lib/createHashHistory';
+import { routerReducer } from 'react-router-redux';
 
-import routes from '../routes';
 import * as reducers from '../reducers';
 
 let middlewares = [thunk];
@@ -14,22 +12,20 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const finalCreateStore = compose(
-  applyMiddleware(...middlewares),
-  reduxReactRouter({routes, createHistory}),
+  applyMiddleware(...middlewares)
 )(createStore);
 
 export default function configureStore(initialState) {
-  const reducer = combineReducers(reducers);
+  const reducer = combineReducers({...reducers, routing: routerReducer});
   const store = finalCreateStore(reducer, initialState);
 
   if (process.env.NODE_ENV === 'development' && module.hot) {
     module.hot.accept('../reducers', () => {
       const nextReducers = require('../reducers');
-      const nextReducer = combineReducers(nextReducers);
+      const nextReducer = combineReducers({...nextReducers, routing: routerReducer});
       store.replaceReducer(nextReducer);
     });
   }
 
   return store;
 }
-

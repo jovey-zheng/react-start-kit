@@ -1,20 +1,22 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {Link} from 'react-router';
-import {get} from 'lodash';
-import {Menu} from 'antd';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router';
+import { get } from 'lodash';
+import { Menu } from 'antd';
 
 import './sidebar.css'
 
 @connect(
   state => ({
-    router: state.router,
+    router: get(state, 'routing.locationBeforeTransitions'),
   })
 )
 export default class Sidebar extends Component {
 
   render() {
-    const {router} = this.props;
+    const {
+      router
+    } = this.props;
 
     return (
       <div className="sidebar">
@@ -24,7 +26,7 @@ export default class Sidebar extends Component {
 
         <Menu
           theme="light"
-          selectedKeys={[`${get(router, 'location.pathname')}`]}
+          selectedKeys={[`${get(router, 'pathname')}`]}
           mode="inline"
           className="padding-top-lg"
         >

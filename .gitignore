@@ -1,8 +1,13 @@
+# Mac OS
 .DS_Store
 
+# npm
+node_modules
 npm-debug.log
 
+# bower
 bower_components
-node_modules
 
-dist
+# folder
+dist*
+_dist*

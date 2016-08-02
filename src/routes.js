@@ -1,12 +1,13 @@
 import React from 'react';
-import {Route} from 'react-router';
+import { Route } from 'react-router';
 import Base from 'components/base/Base';
 import Home from 'components/home/Home';
-
-import WebpackPage from 'components/content/WebpackPage';
-import ComponentPage from 'components/content/ComponentPage';
-import RouterPage from 'components/content/RouterPage';
-import AntdPage from 'components/content/AntdPage';
+import {
+  WebpackPage,
+  ComponentPage,
+  RouterPage,
+  AntdPage
+} from 'components/content';
 
 export default (
   <Route component={Base}>
