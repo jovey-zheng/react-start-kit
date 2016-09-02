@@ -1,17 +1,19 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
 
 module.exports = {
   entry: {
-    app: [__dirname + '/src/index'],
+    app: [path.resolve(__dirname, 'src/index')],
+
   },
   output: {
-    path: __dirname + '/_dist',
+    path: path.resolve(__dirname, '_dist'),
     filename: '[name]_[hash:8].js',
   },
   resolve: {
     root: [
-      __dirname + '/src',
-      __dirname + '/node_modules',
+      path.resolve(__dirname, 'src'),
+      path.resolve(__dirname, 'node_modules'),
       __dirname,
     ],
     extensions: ['', '.js'],
@@ -41,8 +43,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: __dirname + '/src/index.html',
-      favicon: __dirname + '/src/favicon.ico',
+      template: path.resolve(__dirname, 'src/index.html'),
+      favicon: path.resolve(__dirname, 'src/favicon.ico'),
       inject: false,
       minify: {
         html5: true,
